@@ -36,10 +36,10 @@ app.get("/", function(req, res) {
     if (err) throw err;
 
     // Test it
-    console.log('The solution is: ', data);
+    //console.log('The solution is: ', data);
 
     // Test it
-    res.send(data);
+    // res.send(data);
 
     res.render("index", { wishes: data });
   });
@@ -48,10 +48,10 @@ app.get("/", function(req, res) {
 // Post route -> back to home
 app.post("/", function(req, res) {
   // Test it
-  console.log('You sent, ' + req.body.wish);
+  //console.log('You sent, ' + req.body.wish);
 
   // Test it
-  res.send('You sent, ' + req.body.wish);
+  //res.send('You sent, ' + req.body.wish);
 
   connection.query("INSERT INTO wishes (wish) VALUES (?)", [req.body.wish], function(err, result) {
     if (err) throw err;
