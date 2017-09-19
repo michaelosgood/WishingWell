@@ -60,5 +60,9 @@ app.post("/", function(req, res) {
   });
 });
 
-app.listen(port);
-console.log("Listening on PORT: " + port); 
+// app.listen(port);
+// console.log("Listening on PORT: " + port); 
+
+app.listen(port, function() {
+    console.log("listeining on port: " + port);
+});
